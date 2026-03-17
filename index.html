@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Freemovie.BD - Premium movie streaming platform with thousands of films, ratings, detailed information, and professional composition.">
+    <meta name="keywords" content="movies, streaming, cinema, films, watch movies online, movie database">
+    <meta name="author" content="Shafi Mohammad">
+    <meta name="theme-color" content="#FF6B35">
+    <meta property="og:title" content="Freemovie.BD - Premium Movie Platform">
+    <meta property="og:description" content="Discover the world's greatest films with detailed information and professional streaming experience.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630?text=CineMax">
+    <meta property="og:url" content="https://freemovie.bd">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Freemovie.BD - Premium Movie Platform</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='50' font-size='50' text-anchor='middle' dominant-baseline='middle' fill='%23FF6B35'>🎬</text></svg>">
+    <link rel="apple-touch-icon" href="https://via.placeholder.com/180x180?text=CineMax">
+    <link rel="preload" href="styles/main.css" as="style">
+    <link rel="preload" href="styles/animations.css" as="style">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <!-- Font Awesome loaded asynchronously for better performance -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-film"></i>
+                <span>Freemovie.BD</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#featured" class="nav-link">Featured</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#movies" class="nav-link">Movies</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#categories" class="nav-link">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Search movies..." id="searchInput">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <video class="hero-video" autoplay muted loop>
+                <source src="https://via.placeholder.com/1920x1080" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-text">
+                <h1 class="hero-title">Experience Cinema</h1>
+                <p class="hero-subtitle">Discover the World's Greatest Films</p>
+                <button class="btn btn-primary" onclick="scrollToSection('featured')">
+                    Explore Now
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Movie Section -->
+    <section class="featured-section" id="featured">
+        <div class="container">
+            <h2 class="section-title">Featured This Week</h2>
+            <div class="featured-grid">
+                <div class="featured-card featured-main">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1629873886876-bbfc8c3e2de3?w=800&h=600&fit=crop" alt="Featured Movie">
+                        <div class="card-overlay">
+                            <button class="btn btn-primary"><i class="fas fa-play"></i> Watch Now</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="score">9.2/10</span>
+                        </div>
+                        <h3>The Quantum Realm</h3>
+                        <p class="genre"><i class="fas fa-tag"></i> Sci-Fi, Thriller</p>
+                        <p class="description">An epic journey through parallel dimensions as humanity races against time to save civilization itself. Featuring groundbreaking visual effects and a compelling narrative that will leave you speechless.</p>
+                        <div class="movie-meta">
+                            <span><i class="fas fa-clock"></i> 158 min</span>
+                            <span><i class="fas fa-calendar"></i> 2024</span>
+                            <span><i class="fas fa-user-circle"></i> Director: Christopher Nolan</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="featured-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1485095329183-d0797cdc5676?w=400&h=600&fit=crop" alt="Featured Movie 2">
+                        <div class="card-overlay">
+                            <button class="btn btn-small"><i class="fas fa-play"></i> Play</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="score">8.7/10</span>
+                        </div>
+                        <h3>Echoes of Tomorrow</h3>
+                        <p class="genre">Drama, Mystery</p>
+                        <p class="description">A gripping tale of redemption and discovery in a near-future world.</p>
+                    </div>
+                </div>
+
+                <div class="featured-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1518676590629-3dcbd9c5a5c9?w=400&h=600&fit=crop" alt="Featured Movie 3">
+                        <div class="card-overlay">
+                            <button class="btn btn-small"><i class="fas fa-play"></i> Play</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="score">9.4/10</span>
+                        </div>
+                        <h3>Midnight Horizons</h3>
+                        <p class="genre">Adventure, Sci-Fi</p>
+                        <p class="description">An breathtaking adventure across undiscovered territories.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section" id="categories">
+        <div class="container">
+            <h2 class="section-title">Browse by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-filter="action">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Action</h3>
+                    <p>742 Movies</p>
+                </div>
+                <div class="category-card" data-filter="comedy">
+                    <i class="fas fa-laugh"></i>
+                    <h3>Comedy</h3>
+                    <p>563 Movies</p>
+                </div>
+                <div class="category-card" data-filter="drama">
+                    <i class="fas fa-heart"></i>
+                    <h3>Drama</h3>
+                    <p>891 Movies</p>
+                </div>
+                <div class="category-card" data-filter="horror">
+                    <i class="fas fa-skull"></i>
+                    <h3>Horror</h3>
+                    <p>327 Movies</p>
+                </div>
+                <div class="category-card" data-filter="scifi">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Sci-Fi</h3>
+                    <p>455 Movies</p>
+                </div>
+                <div class="category-card" data-filter="romance">
+                    <i class="fas fa-heart-pulse"></i>
+                    <h3>Romance</h3>
+                    <p>612 Movies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Movies Grid Section -->
+    <section class="movies-section" id="movies">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Popular Movies</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="recent">Recent</button>
+                    <button class="filter-btn" data-filter="trending">Trending</button>
+                    <button class="filter-btn" data-filter="top">Top Rated</button>
+                </div>
+            </div>
+
+            <div class="movies-grid" id="moviesGrid">
+                <!-- Movies will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Get notifications about new releases, exclusive previews, and special offers</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3><i class="fas fa-film"></i> Freemovie.BD</h3>
+                    <p>Your premier destination for cinema excellence and entertainment.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#movies">Movies</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#featured">Featured</a></li>
+                        <li><a href="access.html">Access Info</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-envelope"></i> info@freemovie.bd</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-map-pin"></i> Los Angeles, CA 90001</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Freemovie.BD. All rights reserved. | Owner: <strong>Shafi Mohammad</strong> | Crafted with <i class="fas fa-heart"></i> for cinema lovers</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Movie Details -->
+    <div class="modal" id="movieModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body" id="modalBody">
+                <!-- Movie details will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    
+    <!-- Service Worker Registration for PWA -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js').catch(err => {
+                    console.log('Service Worker registration failed:', err);
+                });
+            });
+        }
+    </script>
+</body>
+</html>

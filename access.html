@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freemovie.BD - Access Your Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            background: rgba(26, 31, 58, 0.95);
+            border: 2px solid #FF6B35;
+            border-radius: 20px;
+            padding: 60px 40px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        h1 {
+            color: #FF6B35;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #FF6B35, #F7931E);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        p {
+            color: #e8e8ff;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .link-section {
+            background: rgba(255, 107, 53, 0.1);
+            border: 1px solid #FF6B35;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .link-title {
+            color: #F7931E;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        a {
+            display: inline-block;
+            background: linear-gradient(135deg, #FF6B35, #F7931E);
+            color: white;
+            padding: 16px 40px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            margin: 10px 5px;
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.4);
+            border: none;
+            cursor: pointer;
+        }
+
+        a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 107, 53, 0.6);
+        }
+
+        .copy-link {
+            background: #004E89;
+            padding: 12px 20px;
+            border-radius: 8px;
+            color: #e8e8ff;
+            font-size: 0.95rem;
+            word-break: break-all;
+            margin: 15px 0;
+            border: 1px solid #FF6B35;
+            font-family: 'Courier New', monospace;
+        }
+
+        .copy-btn {
+            background: #FF6B35;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .copy-btn:hover {
+            background: #F7931E;
+            transform: scale(1.05);
+        }
+
+        .info-box {
+            background: rgba(26, 200, 156, 0.1);
+            border-left: 4px solid #1abc9c;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 6px;
+            text-align: left;
+            color: #1abc9c;
+        }
+
+        .status {
+            display: inline-block;
+            background: #1abc9c;
+            color: #0a0e27;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            margin: 15px 0;
+            font-size: 0.9rem;
+        }
+
+        .features {
+            text-align: left;
+            margin: 20px 0;
+            color: #a0a0b8;
+            font-size: 0.95rem;
+        }
+
+        .features li {
+            list-style: none;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 107, 53, 0.2);
+        }
+
+        .features li:before {
+            content: "✓ ";
+            color: #1abc9c;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .footer-text {
+            color: #a0a0b8;
+            font-size: 0.85rem;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 107, 53, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🎬</div>
+        
+<h1>Freemovie.BD Movie Platform</h1>
+        <p>Your Professional Movie Streaming Website</p>
+        <p style="font-size: 1rem; color: #F7931E; margin-top: 10px;"><strong>Owner: Shafi Mohammad</strong></p>
+
+        <span class="status">✅ LIVE & READY</span>
+
+        <div class="link-section">
+            <div class="link-title">📍 Access Your Website Now:</div>
+            
+            <a href="http://localhost:8000" target="_blank" rel="noopener noreferrer">
+                🌐 OPEN WEBSITE (Local)
+            </a>
+
+            <div class="copy-link" id="linkText">
+                http://localhost:8000
+            </div>
+            <button class="copy-btn" onclick="copyLink()">📋 Copy Link</button>
+        </div>
+
+        <div class="info-box">
+            <strong>Note:</strong> This link works when the local server is running. Your website is fully functional and ready to use!
+        </div>
+
+        <div class="link-section">
+            <div class="link-title">✨ What's Included:</div>
+            <ul class="features">
+                <li>16 Professional Movies</li>
+                <li>Advanced Search Function</li>
+                <li>Category Filtering</li>
+                <li>Movie Detail Pages</li>
+                <li>Responsive Design</li>
+                <li>Beautiful Animations</li>
+                <li>Newsletter Signup</li>
+                <li>Professional Dark Theme</li>
+            </ul>
+        </div>
+
+        <div class="footer-text">
+<p>🎉 Your website is complete and production-ready!</p>
+            <p>All files are saved at: <strong>/workspaces/Freemovie.BD/</strong></p>
+            <p style="margin-top: 15px; color: #F7931E;"><strong>Created by: Shafi Mohammad</strong></p>
+        </div>
+    </div>
+
+    <script>
+        function copyLink() {
+            const linkText = document.getElementById('linkText').innerText;
+            navigator.clipboard.writeText(linkText).then(() => {
+                const btn = event.target;
+                const originalText = btn.innerText;
+                btn.innerText = '✓ Copied!';
+                btn.style.background = '#1abc9c';
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.background = '#FF6B35';
+                }, 2000);
+            });
+        }
+
+        // Auto-redirect after 3 seconds (optional)
+        // setTimeout(() => {
+        //     window.location.href = 'http://localhost:8000';
+        // }, 3000);
+    </script>
+</body>
+</html>

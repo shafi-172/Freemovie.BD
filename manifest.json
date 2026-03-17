@@ -1,0 +1,91 @@
+{
+"name": "Freemovie.BD - Premium Movie Platform",
+  "short_name": "Freemovie.BD",
+  "description": "Your premier destination for cinema excellence and entertainment. Discover thousands of movies with detailed information, ratings, and streaming options.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0a0e27",
+  "theme_color": "#FF6B35",
+  "dir": "ltr",
+  "lang": "en",
+  "categories": ["entertainment", "movie"],
+  "screenshots": [
+    {
+      "src": "https://via.placeholder.com/192x192?text=CineMax",
+      "sizes": "192x192",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "https://via.placeholder.com/512x512?text=CineMax",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192x192?text=CineMax",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://via.placeholder.com/512x512?text=CineMax",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://via.placeholder.com/maskable-192x192?text=CineMax",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "https://via.placeholder.com/maskable-512x512?text=CineMax",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Browse Movies",
+      "short_name": "Movies",
+      "description": "Browse our collection of movies",
+      "url": "/?view=movies",
+      "icons": [
+        {
+          "src": "https://via.placeholder.com/192x192?text=Movies",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Search Movies",
+      "short_name": "Search",
+      "description": "Search for your favorite movies",
+      "url": "/?view=search",
+      "icons": [
+        {
+          "src": "https://via.placeholder.com/192x192?text=Search",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}
